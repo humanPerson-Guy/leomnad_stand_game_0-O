@@ -13,10 +13,10 @@ buyness=int(input("how much you whant to buy"))
 if buyness <= 0:
     print("please put in what you want to buy.")
 elif buy==1:
-    if mony<=buyness*-2+mony:
+    if money<=buyness*-2+money:
         print("you don't have enough.")
     else:
-        mony=buyness*-2+money
+        money=buyness*-2+money
         lemon=buyness
 elif buy==2:
     if money<=buyness*-1+money:
@@ -32,9 +32,10 @@ elif buy==3:
         shuger=buyness
 elif buy==4:
     if money<=buyness*-2+money:
-        print("your to poor")
+        print("you dont have enough!")
     else:
         money=buyness*-1+money
         ice=buyness
 print (money)
+
 
