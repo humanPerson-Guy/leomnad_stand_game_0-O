@@ -9,15 +9,19 @@ while True:
     if difficulty == "Easy":
         money = 600
         print("You have 600 dollars.")
+        break
     elif difficulty == "Medium":
         money = 400
         print("You have 400 dollars.")
+        break
     elif difficulty == "Hard":
         money = 200
         print("You have 200 dollars.")
+        break
     elif difficulty == "Impossible":
         money = 100
         print("You have 100 dollars")
         break
     else:
+
         print("This input is not valid.")
