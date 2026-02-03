@@ -4,40 +4,40 @@ from nigredants import shop
 goodies=shop()
              
 
-print(goodies["mony"])
+print(goodies["money"])
 print(goodies["lemon"])
 
 
-chos=input("1=shop 2=change recipe 3=change price")
+choose=input("1=shop 2=change recipe 3=change price")
 
 
 print(goodies)
 
-respy={
+recipe={
     "lemon":1,
     "cup":1,
     "ice":1,
     "suger":1
 }
-#print(respy)
+#print(recipe)
 
 while True:
-    print(respy['lemon'])
-    respy['lemon']=int(input("how meny lemons per lemonad"))
-    if respy['lemon']>=5:
+    print(recipe['lemon'])
+    recipe['lemon']=int(input("how many lemons per cup?"))
+    if recipe['lemon']>=5:
         continue
-    respy['cup']=int(input("how meny cups per lemonad"))
-    if respy['cup']>=5:
+    recipe['cup']=int(input("how many cups per lemonad"))
+    if recipe['cup']>=5:
         continue
-    respy['ice']=int(input("how meny ice per lemonad"))
-    if respy['cup']>=5:
+    recipe['ice']=int(input("how much ice per cup?"))
+    if recipe['cup']>=5:
         continue
-    respy['suger']=int(input("how meny suger per lemonad"))
-    if respy['suger']>=5:
+    recipe['sugar']=int(input("how much suger per cup?"))
+    if recipe['sugar']>=5:
         continue
     break
 
-print(respy)
+print(recipe)
 l=0
 c=0
 i=0
@@ -47,30 +47,30 @@ nadCount={
     "lemon":goodies["lemon"],
     "cup":goodies["cup"],
     "ice":goodies["ice"],
-    "suger":goodies["suger"]
+    "sugar":goodies["sugar"]
 }
 
 while nadCount["lemon"] >0:
-    nadCount['lemon']-=respy["lemon"]
+    nadCount['lemon']-=recipe["lemon"]
     l+=1
 if nadCount["lemon"] <0:
-    nadCount['lemon']+=respy["lemon"]    
+    nadCount['lemon']+=recipe["lemon"]    
     l-=1
 
 while nadCount["cup"] >0:
-    nadCount['cup']-=respy["cup"]
+    nadCount['cup']-=recipe["cup"]
     c+=1
 if nadCount["cup"] <0:
-    nadCount['cup']+=respy["cup"]    
+    nadCount['cup']+=recipe["cup"]    
     c-=1
 while nadCount["ice"] >0:
-    nadCount['ice']-=respy["ice"]
+    nadCount['ice']-=recipe["ice"]
     i+=1
 if nadCount["ice"] <0:
-    nadCount['ice']+=respy["ice"]    
+    nadCount['ice']+=recipe["ice"]    
     i-=1
-while nadCount["suger"] >0:
-    nadCount['suger']-=respy["suger"]
+while nadCount["sugar"] >0:
+    nadCount['sugar']-=recipe["sugar"]
     s+=1
 if nadCount["suger"] <0:
     nadCount['suger']+=respy["suger"]    
