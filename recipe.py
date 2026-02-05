@@ -17,7 +17,7 @@ recipe={
     "lemon":1,
     "cup":1,
     "ice":1,
-    "suger":1
+    "sugar":1
 }
 #print(recipe)
 
@@ -32,7 +32,7 @@ while True:
     recipe['ice']=int(input("how much ice per cup?"))
     if recipe['cup']>=5:
         continue
-    recipe['sugar']=int(input("how much suger per cup?"))
+    recipe['sugar']=int(input("how much sugar per cup?"))
     if recipe['sugar']>=5:
         continue
     break
@@ -72,8 +72,8 @@ if nadCount["ice"] <0:
 while nadCount["sugar"] >0:
     nadCount['sugar']-=recipe["sugar"]
     s+=1
-if nadCount["suger"] <0:
-    nadCount['suger']+=respy["suger"]    
+if nadCount["sugar"] <0:
+    nadCount['sugar']+=respy["sugar"]    
     s-=1
 print(nadCount)
 print(l,c,i,s)
@@ -99,7 +99,7 @@ while True:
 
     price=int(input("how expensive is your lemonad"))
     if price >100 or price<0:
-        print("not valid price")
+        print("not a valid price")
         continue
     else:
         break
