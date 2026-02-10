@@ -1,20 +1,21 @@
-from nigredants import shop
-
+from ingredients import shop
 
 goodies=shop()
-             
+
+def choice():
+    shop_choice = input("Welcome to the shop! If you would like to buy lemons enter 1. If you would like to cups enter 2. If you would like to sugar enter 3. If you would like to buy ice enter 4. ")
 
 print(goodies["money"])
 print(goodies["lemon"])
 
 
-choose=input("1=shop 2=change recipe 3=change price")
+choose=input("1 = shop, 2 = change recipe, 3 = change price ")
 
 
 print(goodies)
 
 recipe={
-    "lemon":1,
+   "lemon":1,
     "cup":1,
     "ice":1,
     "sugar":1
@@ -73,7 +74,7 @@ while nadCount["sugar"] >0:
     nadCount['sugar']-=recipe["sugar"]
     s+=1
 if nadCount["sugar"] <0:
-    nadCount['sugar']+=respy["sugar"]    
+    nadCount['sugar']+=recipe["sugar"]    
     s-=1
 print(nadCount)
 print(l,c,i,s)

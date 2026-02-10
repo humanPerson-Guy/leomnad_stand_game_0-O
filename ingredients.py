@@ -4,8 +4,8 @@ def add(num,num1):
 #this sets the basis for the code
 def shop(money=100,lemon=10,cup=10,ice=10,sugar=10):
 #player starting stats
-    buy=int(input("1 =lemon 2=cup 3=sugar 4=ice"))
-    buyness=int(input("how much do you want to buy?"))
+    buy=int(input("1 = lemon, 2 = cup, 3 = sugar, 4 = ice "))
+    buyness=int(input("how much do you want to buy ?"))
     if buyness <= 0:
         print("you didn't buy anything.")
     elif buy==1:
