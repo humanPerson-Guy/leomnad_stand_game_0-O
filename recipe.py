@@ -1,9 +1,7 @@
 from ingredients import shop
 
-goodies=shop()
 
-def choice():
-    shop_choice = input("Welcome to the shop! If you would like to buy lemons enter 1. If you would like to cups enter 2. If you would like to sugar enter 3. If you would like to buy ice enter 4. ")
+goodies = shop()
 
 print(goodies["money"])
 print(goodies["lemon"])
