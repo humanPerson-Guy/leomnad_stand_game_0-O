@@ -1,13 +1,13 @@
-from nigredants import shop
+from ingredants import shop
 
-
+#imports shop function
 goodies=shop()
              
 
 print(goodies["money"])
 print(goodies["lemon"])
 
-
+#sets up first ingridients
 choose=input("1=shop 2=change recipe 3=change price")
 
 
