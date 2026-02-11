@@ -73,7 +73,7 @@ while nadCount["sugar"] >0:
     nadCount['sugar']-=recipe["sugar"]
     s+=1
 if nadCount["sugar"] <0:
-    nadCount['sugar']+=respy["sugar"]    
+    nadCount['sugar']+=recipe["sugar"]    
     s-=1
 print(nadCount)
 print(l,c,i,s)
