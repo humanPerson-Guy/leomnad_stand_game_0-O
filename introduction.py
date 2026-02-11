@@ -1,8 +1,6 @@
 # This code will be introduction of the game
 money_two = 0
 
-name = input("Enter your name: ")
-print("Hello", name ,"welcome to lemonade stand! In this game you will sell lemonade to customers. The goal is to get the most days possible. The rules are very simple you start off with a amount of money and buy ingredients and create a recipe for your customers. If you end up with no money you go bankrupt and loose.")
 def intro():
     while True:
         difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible: ")
@@ -22,4 +20,8 @@ def intro():
 
             print("This input is not valid.")
 
+
+name = input("Enter your name: ")
+print("Hello", name ,"welcome to lemonade stand! In this game you will sell lemonade to customers. The goal is to get the most days possible. The rules are very simple you start off with a amount of money and buy ingredients and create a recipe for your customers. If you end up with no money you go bankrupt and loose.")
 money_two = intro()
+
