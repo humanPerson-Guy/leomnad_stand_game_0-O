@@ -1,4 +1,4 @@
-from ingredants import shop
+from ingredients import shop
 
 #imports shop function
 goodies=shop()
