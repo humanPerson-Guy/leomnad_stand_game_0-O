@@ -108,7 +108,7 @@ print(todnads)
 
 while True:
 
-    price=int(input("how expensive is your lemonad"))
+    price=int(input("how expensive is your lemonade?"))
     if price >100 or price<0:
         print("not a valid price")
         continue
