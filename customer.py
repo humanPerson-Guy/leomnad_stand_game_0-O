@@ -8,7 +8,8 @@
 import random
 
 class Customer:
-    def custmer(self, sweetness_preference=None, ice_preference=None, price_point=None, lemonness=None):
+
+    def __init__(self, sweetness_preference=None, ice_preference=None, price_point=None):
         self.sweetness_preference = (
             sweetness_preference if sweetness_preference is not None
             else random.randint(1, 3)
@@ -21,13 +22,12 @@ class Customer:
             price_point if price_point is not None
             else round(random.uniform(0.25, 4.0),2)
         )
-        self.lemonness = (
-            lemonness if price_point is not None
-            else random.randint(1,3)
-        )
+
+
+    def get_customer_attributes(self):
         return {
-            "sweet": self.sweetness_preference,
+            "sweetness": self.sweetness_preference,
             "ice": self.ice_preference,
-            "price": self.price_point,
-            "lemon": self.lemonness
+            "price": self.price_point
         }
+

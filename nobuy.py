@@ -9,11 +9,14 @@ recipe={
 }
 def buyOrnobuy(guy,recipe):
     goodness={
-        "sweet":guy["sweet"]-recipe["sugar"],
-        "lemon":guy["lemon"]-recipe["lemon"],
+        "sweet":guy["sweetness"]-recipe["sugar"],
         "ice":guy["ice"]-recipe["ice"],
     }
     print(goodness)
 
-buyOrnobuy(1,recipe)
+
+
+c = Customer()
+
+buyOrnobuy(c.get_customer_attributes(),recipe)
 
