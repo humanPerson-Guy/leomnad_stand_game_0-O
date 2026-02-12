@@ -1,0 +1,18 @@
+from custmer import custmer
+import random
+
+resipe={
+    "lemon":1,
+    "cup":1,
+    "ice":1,
+    "sugar":1
+}
+def buyOrnobuy(guy,recipy):
+    goodness={
+        "sweet":guy["sweet"]-recipe["sugar"],
+        "lemon":guy["lemon"]-recipe["lemon"],
+        "ice":guy["ice"]-recipe["ice"],
+    }
+    print(goodness)
+
+buyOrnobuy(1,resipe)
