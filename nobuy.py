@@ -1,4 +1,4 @@
-from custmer import custmer
+from cusotmer import customer
 import random
 
 recipe={
@@ -16,4 +16,5 @@ def buyOrnobuy(guy,recipe):
     print(goodness)
 
 buyOrnobuy(1,recipe)
+
 
