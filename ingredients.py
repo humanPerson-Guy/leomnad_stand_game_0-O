@@ -1,10 +1,10 @@
-
+from introduction import money_two
 #this completes the purchase
 def add(num,num1):
         number= num+num1
         return number
 #this sets the basis for the code
-def shop(money=100,lemon=10,cup=10,ice=10,sugar=10):
+def shop(money=money_two,lemon=10,cup=10,ice=10,sugar=10):
 #player starting stats
     buy=int(input("1 =lemon 2=cup 3=sugar 4=ice"))
     buyness=int(input("how much do you want to buy?"))
