@@ -1,25 +1,13 @@
 from ingredients import shop
-<<<<<<< HEAD
-
 
 goodies = shop()
-=======
 
-#imports shop function
-goodies=shop()
-             
->>>>>>> bd34c6364d78a7a562e914fd82147ba58e50218f
 
 print(goodies["money"])
 print(goodies["lemon"])
 
-<<<<<<< HEAD
-
 choose=input("1 = shop, 2 = change recipe, 3 = change price ")
-=======
-#sets up first ingridients
-choose=input("1=shop 2=change recipe 3=change price")
->>>>>>> bd34c6364d78a7a562e914fd82147ba58e50218f
+
 
 
 print(goodies)
