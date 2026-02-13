@@ -4,15 +4,12 @@ from ingredients import shop
 
 
 
-print(goodies["money"])
-print(goodies["lemon"])
-
-choose=input("1 = shop, 2 = change recipe, 3 = change price ")
 
 
 
 
-print(goodies)
+goodies=1
+
 
 recipe={
     "lemon":1,
