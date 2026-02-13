@@ -4,7 +4,7 @@
 # and a price point they are willing to pay.
 # All of these attributes will influence their purchasing decision and
 # are returned as a list of attributes.
-
+# DON'T EDIT THIS CODE AT ALL!
 import random
 
 class Customer:
