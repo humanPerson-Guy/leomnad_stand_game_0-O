@@ -21,17 +21,17 @@ recipe={
 def resipyChanger():
     while True:
         print(recipe['lemon'])
-        recipe['lemon']=int(input("how many lemons per cup?"))
+        recipe['lemon']=float(input("how many lemons per cup? "))
         if recipe['lemon']>=5:
             continue
-        recipe['cup']=int(input("how many cups per lemonad"))
-        if recipe['cup']>=5:
-            continue
-        recipe['ice']=int(input("how much ice per cup?"))
-        if recipe['cup']>=5:
-            continue
-        recipe['sugar']=int(input("how much sugar per cup?"))
+        recipe['sugar']=float(input("how much sugar per cup? "))
         if recipe['sugar']>=5:
+            continue
+        recipe['ice']=float(input("how much ice per cup? "))
+        if recipe['cup']>=5:
+            continue
+        recipe['cup']=float(input("how many cups would you like to sell? "))
+        if recipe['cup']>=5:
             continue
         break
 
@@ -95,7 +95,7 @@ def resipyChanger():
 def pricer():
     while True:
 
-        price=int(input("how expensive is your lemonade?"))
+        price = float(input("how expensive is your lemonade? "))
         if price >100 or price<0:
             print("not a valid price")
             continue
@@ -104,3 +104,4 @@ def pricer():
 
     return price
 pricer()
+resipyChanger()
