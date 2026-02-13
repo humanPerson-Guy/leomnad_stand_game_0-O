@@ -1,6 +1,6 @@
 from ingredients import shop
 
-goodies = shop()
+
 
 
 
@@ -106,3 +106,4 @@ def pricer():
             break
 
     return price
+pricer()
