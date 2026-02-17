@@ -9,7 +9,7 @@ recipe={
     "ice":1,
     "sugar":1
 }
-money, name,hardness=intro()
+money,name,hardness=intro()
 print(hardness)
 goodies=shop(money)
 ch=input("what do you do 1 shop 2 see yoour goodies 3 set your lemonad price 4 change the recipe")
