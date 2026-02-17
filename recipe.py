@@ -18,7 +18,7 @@ recipe={
     "sugar":1
 }
 #print(recipe)
-def resipyChanger():
+def resipyChanger(goodies):
     while True:
         print(recipe['lemon'])
         recipe['lemon']=float(input("how many lemons per cup? "))
@@ -103,5 +103,3 @@ def pricer():
             break
 
     return price
-pricer()
-resipyChanger()
