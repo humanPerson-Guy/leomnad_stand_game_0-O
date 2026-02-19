@@ -79,7 +79,7 @@ def buyOrnobuy(guy,recipe,price):
 
 
 
-c = Customer()
+
 
 
 
