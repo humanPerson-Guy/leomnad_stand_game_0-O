@@ -10,17 +10,25 @@ recipe={
     "ice":1,
     "sugar":1
 }
-goodies={
-    
-}
+die="n"
 money, name=intro()
+goodies={
+    "money":money,
+    "cup":0,
+    "lemon":0,
+    "sugar":0,
+    "ice":0
+}
+goodies=shop(goodies)
 if money==0.2:
     x=1
     debt=10002
 else :
     debt=1001
-while True:
-    goodies=shop(money)
+price=1
+x=3
+while die=="n":
+    
     ch=input("what do you do 1 shop 2 see yoour goodies 3 set your lemonad price 4 change the recipe and any thing else to end day")
     if ch== "1":
         goodies=shop(goodies)
@@ -32,6 +40,9 @@ while True:
         recipe=resipyChanger(goodies)
     else:
         print("custimers are aproching")
+        if goodies["money"]<=0:
+            die="y"
         break
-for i in range(1,random.randint(x,3)):
+for i in range(1,random.randint(x,5)):
     c=Customer()
+    buyOrnobuy(c.get_customer_attributes(),recipe,price)

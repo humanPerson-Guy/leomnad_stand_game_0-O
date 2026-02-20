@@ -11,11 +11,11 @@ def buyOrnobuy(guy,recipe,price):
     
     
     goodness={
-        "sweet":guy["sweetness"]-recipe["sugar"],
-        "ice":guy["ice"]-recipe["ice"],
+        "sweet":guy["sweetness"]-recipe['sugar'],
+        "ice":guy["ice"]-recipe['ice'],
 
     }
-    print(guy)
+   
     chance=["y","y","y"]
     while goodness["sweet"]!= 0:
         if goodness["sweet"]>0:
@@ -24,7 +24,7 @@ def buyOrnobuy(guy,recipe,price):
         if goodness["sweet"]<0:
             chance.append("n")
             goodness["sweet"]+=1
-        print(goodness["sweet"])
+       
     while goodness["ice"]!= 0:
         if goodness["ice"]>0:
             chance.append("n")
@@ -32,8 +32,8 @@ def buyOrnobuy(guy,recipe,price):
         if goodness["ice"]<0:
             chance.append("n")
             goodness["ice"]+=1
-        print(goodness["ice"])
-    print(chance)    
+     
+     
     
     if guy["price"]+.50<price:
         chance.append("n")
@@ -68,7 +68,7 @@ def buyOrnobuy(guy,recipe,price):
     if guy["price"]+92<price:
         for i in range(1,800):
             chance.append("n")
-    print(chance)     
+   
     x=random.choice([" level 100 mafia boss"," borgison"," fesgiraf"," gilziblorp"," your mother"," bob"," you"," giraf"," dinosor"])
     print(random.choice(chance))
     custTipe=(random.choice(["guy","gal","guy","gal","mafia","mafia","gal","guy","eldrich entity"]))
@@ -77,6 +77,7 @@ def buyOrnobuy(guy,recipe,price):
         custTipe="eldrich entity"+x
     print(custTipe)
 
+c=Customer()
 
 
 

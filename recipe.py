@@ -40,7 +40,7 @@ def resipyChanger(goodies):
     c=0
     i=0
     s=0
-    print(goodies)
+    
     nadCount={
         "lemon":goodies["lemon"],
         "cup":goodies["cup"],
@@ -86,7 +86,7 @@ def resipyChanger(goodies):
             s-=1
         else:
             break   
-    print(todnads)
+    return todnads,recipe
 
 
 

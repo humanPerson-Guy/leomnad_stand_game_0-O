@@ -13,16 +13,16 @@ def intro():
     if difficulty == "Easy" or "1":
         print("You have 600 dollars.")
         mony=600
-    if difficulty == "Medium" or "2":
+    elif difficulty == "Medium" or "2":
         print("You have 400 dollars.")
         mony=400    
-    if difficulty == "Hard" or "3":
+    elif difficulty == "Hard" or "3":
         print("You have 200 dollars.")
         mony=200    
-    if difficulty == "Impossible" or "4":
+    elif difficulty == "Impossible" or "4":
         print("You have 100 dollars")
         mony=99.68    
-    if difficulty == "ez":
+    elif difficulty == "ez":
         print("you have nothing")
         mony=0.2
     else:
