@@ -14,23 +14,24 @@ die="n"
 money, name=intro()
 goodies={
     "money":money,
-    "cup":0,
-    "lemon":0,
-    "sugar":0,
-    "ice":0
+    "cup":20,
+    "lemon":10,
+    "sugar":55,
+    "ice":457
 }
 print("you need to buy suplys")
 
 goodies=shop(goodies)
 print("you need to set your resipy ")
 lemonaids, recipe=resipyChanger(goodies)
+print(lemonaids)
 if money==0.2:
     x=1
     debt=10002
 else :
     debt=1001
 price=1
-x=3
+x=67
 print("you should probly change your price from 1$")
 while die=="n":
     
@@ -42,7 +43,8 @@ while die=="n":
     elif ch== "3":
         price=pricer()
     elif ch== "4":
-        recipe=resipyChanger(goodies)
+        lemonaids,recipe=resipyChanger(goodies)
+        print(lemonaids)
     else:
         print("custimers are aproching")
         if goodies["money"]<=0:
