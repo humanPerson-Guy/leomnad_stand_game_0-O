@@ -36,6 +36,8 @@ def resipyChanger(goodies):
         break
 
     print(recipe)
+    return recipe
+def lemonais_count(goodies):
     l=0
     c=0
     i=0
@@ -74,11 +76,12 @@ def resipyChanger(goodies):
         nadCount['sugar']+=recipe["sugar"]    
         s-=1
     print(nadCount)
-    print(l,c,i,s)
+
+    
     todnads=0
     while True:
         if not(l<=0)and not(c<=0) and not(i<=0) and not(s<=0):
-            print("yugblkrfgetdhbjv")
+            
             todnads+=1
             l-=1
             c-=1
@@ -86,7 +89,7 @@ def resipyChanger(goodies):
             s-=1
         else:
             break   
-    return todnads,recipe
+    return todnads
 
 
 

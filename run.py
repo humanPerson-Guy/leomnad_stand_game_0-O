@@ -1,4 +1,4 @@
-from recipe import resipyChanger,pricer
+from recipe import resipyChanger,pricer,lemonais_count
 from customer import Customer
 from introduction import intro
 from ingredients import shop
@@ -14,24 +14,24 @@ die="n"
 money, name=intro()
 goodies={
     "money":money,
-    "cup":20,
-    "lemon":10,
-    "sugar":55,
-    "ice":457
+    "cup":2,
+    "lemon":2,
+    "sugar":2,
+    "ice":2
 }
 print("you need to buy suplys")
 
 goodies=shop(goodies)
 print("you need to set your resipy ")
-lemonaids, recipe=resipyChanger(goodies)
-print(lemonaids)
+recipe=resipyChanger(goodies)
+
 if money==0.2:
     x=1
     debt=10002
 else :
     debt=1001
 price=1
-x=67
+x=5
 print("you should probly change your price from 1$")
 while die=="n":
     
@@ -43,17 +43,18 @@ while die=="n":
     elif ch== "3":
         price=pricer()
     elif ch== "4":
-        lemonaids,recipe=resipyChanger(goodies)
-        print(lemonaids)
+        recipe=resipyChanger(goodies)
+        
     else:
-        print("custimers are aproching")
         if goodies["money"]<=0:
             die="y"
         break
-for i in range(1,random.randint(1,x)):
+    lemonaids=lemonais_count(goodies)
+for i in range(1,random.randint(x,8)):
     c=Customer()
     tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids)
     if buy=="y":
         goodies["money"]+=price
+        lemonaids=-1
         print(goodies["money"])
     
