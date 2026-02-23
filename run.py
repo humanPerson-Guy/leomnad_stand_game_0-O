@@ -21,13 +21,15 @@ goodies={
 }
 day=1
 print("you need to buy suplys")
-
+sanity=10-random.randint(1,3)
 goodies=shop(goodies)
 print("you need to set your resipy ")
 recipe=resipyChanger(goodies)
-
+hp=7
 if money==0.2:
     x=1
+    hp=2
+    sanity=6-random.randint(1,2)
     debt=10002
 else :
     debt=1001
@@ -46,7 +48,7 @@ while day!=8 and die=="n":
             price=pricer()
         elif ch== "4":
             recipe=resipyChanger(goodies)
-            
+        
         else:
             if goodies["money"]<=0:
                 die="y"
@@ -55,9 +57,19 @@ while day!=8 and die=="n":
     for i in range(1,random.randint(x,8)):
         c=Customer()
         tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids)
+        if tipe.__contains__("eldrich entity"):
+            sanity-=1
+            if tipe=="eldrich entity dinosor":
+                print("your mind gos numb")
+            if tipe=="eldrich entity you":
+                print("you see your self walk up to your stand somthing feels off but")
+
         if buy=="y":
             goodies["money"]+=price
             lemonaids-=1
             print(goodies["money"])
     day+=1
+    sanity+=1
+    if day==4:
+        hp+=1
         

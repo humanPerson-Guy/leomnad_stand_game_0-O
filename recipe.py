@@ -30,7 +30,7 @@ def resipyChanger(goodies):
         recipe['ice']=float(input("how much ice per cup? "))
         if recipe['ice']>=5:
             continue
-        recipe['cup']=float(input("how many cups would you like to sell? "))
+        recipe['cup']=float(input("how many cups per cup "))
         if recipe['cup']>=5:
             continue
         break
