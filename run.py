@@ -56,18 +56,32 @@ while day!=8 and die=="n":
         lemonaids=lemonais_count(goodies)
     for i in range(1,random.randint(x,8)):
         c=Customer()
-        tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids)
+        tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids,recipe["cup"])
         if tipe.__contains__("eldrich entity"):
             sanity-=1
             if tipe=="eldrich entity dinosor":
                 print("your mind gos numb")
             if tipe=="eldrich entity you":
-                print("you see your self walk up to your stand somthing feels off but")
+                print("you see your self walk up to your lemonaid stand as it gets closer your vison gos blurry")
+                print("a wave of pain floods your mind .")
+                if buy=="y":
+                    print("it dusint matter tho cuz thay bought your lemonaid")
+            if tipe=="mafia":
+                print("eah you got the goods ")
+                print("no well takes out banana.")
+                if buy=="n":
+                    hp-=1
+                    print("a banana wond blood flows from your side. blood flows down the street none of the custimers seem to notice.")
+                    if sanity<6:
+                        sanity-=1
+            if day==7:
+                print("")
 
         if buy=="y":
             goodies["money"]+=price
             lemonaids-=1
             print(goodies["money"])
+
     day+=1
     sanity+=1
     if day==4:
