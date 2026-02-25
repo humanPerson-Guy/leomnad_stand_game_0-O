@@ -25,6 +25,7 @@ def intro():
     elif difficulty == "ez":
         print("you have nothing")
         mony=0.2
+        break
     else:
          print("invalid input")
     return mony,name
