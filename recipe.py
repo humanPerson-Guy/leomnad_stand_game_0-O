@@ -18,7 +18,7 @@ recipe={
     "sugar":1
 }
 #print(recipe)
-def resipyChanger():
+def resipyChanger(goodies):
     while True:
         print(recipe['lemon'])
         recipe['lemon']=float(input("how many lemons per cup? "))
@@ -28,19 +28,21 @@ def resipyChanger():
         if recipe['sugar']>=5:
             continue
         recipe['ice']=float(input("how much ice per cup? "))
-        if recipe['cup']>=5:
+        if recipe['ice']>=5:
             continue
-        recipe['cup']=float(input("how many cups would you like to sell? "))
+        recipe['cup']=float(input("how many cups per cup "))
         if recipe['cup']>=5:
             continue
         break
 
     print(recipe)
+    return recipe
+def lemonais_count(goodies):
     l=0
     c=0
     i=0
     s=0
-    print(goodies)
+    
     nadCount={
         "lemon":goodies["lemon"],
         "cup":goodies["cup"],
@@ -74,11 +76,12 @@ def resipyChanger():
         nadCount['sugar']+=recipe["sugar"]    
         s-=1
     print(nadCount)
-    print(l,c,i,s)
+
+    
     todnads=0
     while True:
         if not(l<=0)and not(c<=0) and not(i<=0) and not(s<=0):
-            print("yugblkrfgetdhbjv")
+            
             todnads+=1
             l-=1
             c-=1
@@ -86,7 +89,7 @@ def resipyChanger():
             s-=1
         else:
             break   
-    print(todnads)
+    return todnads
 
 
 
@@ -103,5 +106,3 @@ def pricer():
             break
 
     return price
-pricer()
-resipyChanger()

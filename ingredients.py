@@ -1,13 +1,18 @@
-from introduction import money_two
-#this completes the purchase
+
+
 def add(num,num1):
         number= num+num1
         return number
 #this sets the basis for the code
-def shop(money=money_two,lemon=10,cup=10,ice=10,sugar=10):
+def shop(goodies):
 #player starting stats
+    money=goodies["money"]
+    cup=goodies["cup"]
+    lemon=goodies["lemon"]
+    sugar=goodies["sugar"]
+    ice=goodies["ice"]
     buy=int(input("1 =lemon 2=cup 3=sugar 4=ice "))
-    buyness = ("How much would you like to buy? ")
+    buyness =int(input ("How much would you like to buy? "))
     if buyness <= 0:
         print("you didn't buy anything.")
     elif buy==1:
@@ -21,7 +26,7 @@ def shop(money=money_two,lemon=10,cup=10,ice=10,sugar=10):
             print("you made a purchase ")
         else:
             money=buyness*-1+money
-            cup=+buyness
+            cup+=buyness
     elif buy==3:
         if money<=buyness*-3+money:
             print("you don't have enough")
@@ -34,7 +39,7 @@ def shop(money=money_two,lemon=10,cup=10,ice=10,sugar=10):
         else:
             money=buyness*-1+money
             ice+=buyness
-    print (lemon,cup,ice,sugar,money)
+    
     goodies={
         "lemon":lemon,
         "cup":cup,
@@ -42,6 +47,7 @@ def shop(money=money_two,lemon=10,cup=10,ice=10,sugar=10):
         "sugar":sugar,
         "money":money
     }
+    print(goodies)
     return goodies
 #shop(600,0,0,0,0)
 
