@@ -48,6 +48,8 @@ def shop(goodies):
         "money":money
     }
     print(goodies)
+    
+      
     return goodies
 #shop(600,0,0,0,0)
 
