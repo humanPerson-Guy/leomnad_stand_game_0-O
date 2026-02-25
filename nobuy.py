@@ -1,6 +1,5 @@
 from customer import Customer
 import random
-
 recipe={
     "lemon":1,
     "cup":1,
@@ -35,7 +34,7 @@ def buyOrnobuy(guy,recipe):
         print(goodness["ice"])
     print(chance)    
     
-        
+
        
 
 
