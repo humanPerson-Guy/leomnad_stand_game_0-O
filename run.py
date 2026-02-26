@@ -24,7 +24,7 @@ print("you need to buy suplys")
 sanity=10-random.randint(1,3)
 goodies=shop(goodies)
 print("you need to set your resipy ")
-recipe=resipyChanger(goodies)
+
 hp=7
 if money==0.2:
     x=1
@@ -48,12 +48,12 @@ while day!=8 and die=="n":
             price=pricer()
         elif ch== "4":
             recipe=resipyChanger(goodies)
-        
         else:
             if goodies["money"]<=0:
                 die="y"
             break
         lemonaids=lemonais_count(goodies)
+        print(lemonaids)
     for i in range(1,random.randint(x,8)):
         c=Customer()
         tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids,recipe["cup"])
@@ -71,11 +71,11 @@ while day!=8 and die=="n":
                 print("no well takes out banana.")
                 if buy=="n":
                     hp-=1
-                    print("a banana wond blood flows from your side. blood flows down the street none of the custimers seem to notice.")
+                    print("a banana wond blood flows from your side.Your blood flows down the street none of the custimers seem to notice.")
                     if sanity<6:
                         sanity-=1
             if day==7:
-                print("")
+                print("m")
 
         if buy=="y":
             goodies["money"]+=price

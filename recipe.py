@@ -75,7 +75,7 @@ def lemonais_count(goodies):
     if nadCount["sugar"] <0:
         nadCount['sugar']+=recipe["sugar"]    
         s-=1
-    print(nadCount)
+    
 
     
     todnads=0

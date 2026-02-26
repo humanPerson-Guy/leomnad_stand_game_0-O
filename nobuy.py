@@ -68,7 +68,7 @@ def buyOrnobuy(guy,recipe,price,lemonadies,cup):
     if guy["price"]+92<price:
         for i in range(1,800):
             chance.append("n")
-    n=random.randint(7,cup)
+   
     x=random.choice([" level 100 mafia boss"," borgison"," fesgiraf"," gilziblorp"," your mother"," bob"," you"," giraf"," dinosor"])
     buy=(random.choice(chance))
     custTipe=(random.choice(["guy","gal","guy","gal","mafia","mafia","gal","guy","eldrich entity"]))
@@ -78,9 +78,9 @@ def buyOrnobuy(guy,recipe,price,lemonadies,cup):
     if custTipe=="eldrich entity":
         custTipe="eldrich entity"+x
     print(custTipe)
-    if cup<3:
-        buy="n"
-    return custTipe,buy,cup
+
+
+    return custTipe,buy,
 
 c=Customer()
 
