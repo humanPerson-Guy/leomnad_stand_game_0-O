@@ -25,9 +25,10 @@ def intro():
     elif difficulty == "ez":
         print("you have nothing")
         mony=0.2
-        break
+        
     else:
-         print("invalid input")
+        print("dumy ")
+        mony=-99999999999998
     return mony,name
 
 
