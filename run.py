@@ -109,4 +109,4 @@ while day!=8 and die=="n":
 
         print("what whould you like to do with your night .1 for crime .2 for meditation .3 for going to the market.4 for gambling.")
     
-        
+        print("d")
