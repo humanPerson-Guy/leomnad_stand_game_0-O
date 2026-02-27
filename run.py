@@ -56,8 +56,12 @@ while day!=8 and die=="n":
             lemonaids=lemonais_count(goodies)
             if goodies["money"]<=0:
                 die="y"
-                
+            if hp<=0:
+                die="y"  
+            if sanity<=4:
+                print('the line of custimers faces are streched eyes ripped out skin pealing off but you need the money')
             break
+
         lemonaids=lemonais_count(goodies)
        
     for i in range(1,random.randint(x,8)):
@@ -73,7 +77,7 @@ while day!=8 and die=="n":
                 print("a wave of pain floods your mind .")
                 if buy=="y":
                     print("it dusint matter tho cuz thay bought your lemonaid")
-    
+                        
         if day==7 and timeguy==1:
             timeguy+=1
         if tipe=="mafia":
@@ -94,11 +98,15 @@ while day!=8 and die=="n":
             goodies["lemon"]-=recipe["lemon"]
             goodies["sugar"]-=recipe["sugar"]
             goodies["ice"]-=recipe["ice"]
-
+    
     day+=1
     trueday+=1
     sanity+=1
-    if day==4:
+    
+    if trueday==4:
         hp+=1
+    while True:
+
+        print("what whould you like to do with your night .1 for crime .2 for meditation .3 for going to the market.4 for gambling.")
     
         
