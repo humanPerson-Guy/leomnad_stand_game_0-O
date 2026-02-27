@@ -20,10 +20,12 @@ goodies={
     "ice":2
 }
 day=1
-print("you need to buy suplys")
+timeguy=1
+trueday=1
+
 sanity=10-random.randint(1,3)
-goodies=shop(goodies)
-print("you need to set your resipy ")
+
+
 
 hp=7
 if money==0.2:
@@ -35,6 +37,8 @@ else :
     debt=1001
 price=1
 x=5
+print("now set your resipe for your lemondid . you can change this later")
+
 print("you should probly change your price from 1$")
 while day!=8 and die=="n":
     while True:
@@ -49,14 +53,17 @@ while day!=8 and die=="n":
         elif ch== "4":
             recipe=resipyChanger(goodies)
         else:
+            lemonaids=lemonais_count(goodies)
             if goodies["money"]<=0:
                 die="y"
+                
             break
         lemonaids=lemonais_count(goodies)
-        print(lemonaids)
+       
     for i in range(1,random.randint(x,8)):
         c=Customer()
         tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids,recipe["cup"])
+        
         if tipe.__contains__("eldrich entity"):
             sanity-=1
             if tipe=="eldrich entity dinosor":
@@ -66,24 +73,32 @@ while day!=8 and die=="n":
                 print("a wave of pain floods your mind .")
                 if buy=="y":
                     print("it dusint matter tho cuz thay bought your lemonaid")
-            if tipe=="mafia":
+    
+        if day==7 and timeguy==1:
+            timeguy+=1
+        if tipe=="mafia":
                 print("eah you got the goods ")
-                print("no well takes out banana.")
+                print("no well (takes out banana and points it at you).")
                 if buy=="n":
                     hp-=1
-                    print("a banana wond blood flows from your side.Your blood flows down the street none of the custimers seem to notice.")
+                    print(".Your blood flows down the side walk none of the custimers seem to notice.")
                     if sanity<6:
-                        sanity-=1
-            if day==7:
-                print("m")
+                        sanity-=1  
+                
 
         if buy=="y":
             goodies["money"]+=price
             lemonaids-=1
             print(goodies["money"])
+            goodies["cup"]-=recipe["cup"]
+            goodies["lemon"]-=recipe["lemon"]
+            goodies["sugar"]-=recipe["sugar"]
+            goodies["ice"]-=recipe["ice"]
 
     day+=1
+    trueday+=1
     sanity+=1
     if day==4:
         hp+=1
+    
         
