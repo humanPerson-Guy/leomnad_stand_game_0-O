@@ -10,7 +10,7 @@ def intro():
 
     
 difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible: ")
-    while True:
+while True:
         if difficulty == "Easy" or "1":
             print("You have 600 dollars.")
             mony = 600
@@ -25,10 +25,10 @@ difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible: ")
             mony = 99.68    
         elif difficulty == "ez":
             print("you have nothing")
-            mony=0.2
+            mony = 0.2
         else:
              print("invalid input")
-            return mony,name
+    
 
 
 
