@@ -13,46 +13,47 @@ def intro():
     difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible: ")
     if difficulty == "Easy" or "1":
         print("You have 600 dollars.")
-        mony = 600
+        money = 600
     elif difficulty == "Medium" or "2":
         print("You have 400 dollars.")
-        mony = 400    
+        money = 400    
     elif difficulty == "Hard" or "3":
         print("You have 200 dollars.")
-        mony = 200    
+        money = 200    
     elif difficulty == "Impossible" or "4":
         print("You have 100 dollars")
-        mony = 99.68    
+        money = 99.68    
     elif difficulty == "ez":
         print("you have nothing")
-        mony=0.2
+        money=0.2
         
     else:
         print("dumy ")
         mony=-99999999999998
-    return mony,name
+    return money,name
 =======
 difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible: ")
     while True:
         if difficulty == "Easy" or "1":
             print("You have 600 dollars.")
-            mony = 600
+            money = 600
         elif difficulty == "Medium" or "2":
             print("You have 400 dollars.")
-            mony = 400    
+            money = 400    
         elif difficulty == "Hard" or "3":
             print("You have 200 dollars.")
             mony = 200    
         elif difficulty == "Impossible" or "4":
             print("You have 100 dollars")
-            mony = 99.68    
+            money = 99.68    
         elif difficulty == "ez":
             print("you have nothing")
             mony=0.2
         else:
              print("invalid input")
-            return mony,name
+            return money,name
 >>>>>>> 0407fca2208e98c5cd7430ba062bf87d2ea47a65
+
 
 
 
