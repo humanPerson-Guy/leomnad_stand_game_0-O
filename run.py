@@ -78,8 +78,6 @@ while day!=8 and die=="n":
                 if buy=="y":
                     print("it dusint matter tho cuz thay bought your lemonaid")
                         
-        if day==7 and timeguy==1:
-            timeguy+=1
         if tipe=="mafia":
                 print("eah you got the goods ")
                 print("no well (takes out banana and points it at you).")
@@ -102,11 +100,48 @@ while day!=8 and die=="n":
     day+=1
     trueday+=1
     sanity+=1
-    
+    if day==7 and money<debt:
+        print("the boss looks at you face contorting flesh ripping apart . your mind splits in two .Your flesh rips eyes roll back..... then it all stops  ")
+        print("you find your self in a infinet white void . then it all")
+        print("         ,----.  .-._                      ,-,--. " )
+        print(',-.--` , \/==/ \  .-._  _,..---._  ,-.-  _')
+        print( '|==|-  _.-`|==|, \/ /, /==/,   -  \/==/_ ,_.')
+        print( '  |==|   `.-.|==|-  \|  ||==|   _   _\==\  \ ' ) 
+        print('/==/_ ,    /|==| ,  | -||==|  .=.   |\==\ -\  ') 
+        print('|==|    .- |==| -   _ ||==|,|   | -|_\==\ ,\'' )
+        print('|==|_  ,`-._|==|  /\ , ||==|     /==/\/ _ |')
+        print('/==/ ,     //==/, | |- ||==|-,   _`/\==\ - , / ')
+        print('`--`-----`` `--`./  `--``-.`.____.  `--`---   ')
+
+        
     if trueday==4:
         hp+=1
     while True:
 
-        print("what whould you like to do with your night .1 for crime .2 for meditation .3 for going to the market.4 for gambling.")
+        print("what whould you like to do with your night .1 for crime .2 for meditation.3 for gambling.")
     
-        print("d")
+        cho=input()
+        if cho==4:
+            w=random.choice(["n","n","n","y"])
+            loses=input("how much you gmbling")
+            try:
+                loses=float(loses)
+            except ValueError:
+                print("your firend disides to bet for you becose of your indicition.")
+                loses=2
+            if w=="n":
+                money-=loses
+                print("you lost"+str(loses)+"dolors")
+            if w=="y":
+                money+=loses
+                print("you won"+str(loses)+"dolors")
+                
+        elif cho==2:
+            print("your mind reforms")
+            sanity+=1
+        elif cho==1:
+            print("you comit a crime")   
+            m=random.randint(-1,-3.48,-2,-3,-56,-2.3,-1.3,-4.93,1,-2,1,1,1,-1,-1,-2,4.4,3.57,-2.34,1.34,1.563,1,2,3,34,12,6.7)
+            print("you got "+str(m)+" money")
+            print()
+
