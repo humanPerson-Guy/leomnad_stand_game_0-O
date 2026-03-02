@@ -8,7 +8,7 @@ def shop(goodies):
 #player starting stats
     money=goodies["money"]
     cup=goodies["cup"]
-    lemon=goodies["lemon"]
+    lemon=goodies["lemon"] #stuff
     sugar=goodies["sugar"]
     ice=goodies["ice"]
     while True:
@@ -16,7 +16,7 @@ def shop(goodies):
         try:
             buy=int(buy)
         except ValueError:
-            print("a number idiot")
+            print("i need a number idiot")
         else:
             break
     while True:
@@ -25,7 +25,7 @@ def shop(goodies):
         try:
             buyness=int(buy)
         except ValueError:
-            print("a number idiot")
+            print("i need a number idiot")
         else:
             break
     
@@ -39,7 +39,7 @@ def shop(goodies):
             lemon+=buyness
     elif buy==2:
         if money<=buyness*-1+money:
-            print("you made a purchase ")
+            print("you made a purchase")
         else:
             money=buyness*-1+money
             cup+=buyness
@@ -70,3 +70,4 @@ def shop(goodies):
 #shop(600,0,0,0,0)
 
 #this completes the purchase
+
