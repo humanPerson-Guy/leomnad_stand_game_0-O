@@ -139,9 +139,12 @@ while day!=8 and die=="n":
         elif cho==2:
             print("your mind reforms")
             sanity+=1
+            break
         elif cho==1:
             print("you comit a crime")   
             m=random.randint(-1,-3.48,-2,-3,-56,-2.3,-1.3,-4.93,1,-2,1,1,1,-1,-1,-2,4.4,3.57,-2.34,1.34,1.563,1,2,3,34,12,6.7)
-            print("you got "+str(m)+" money")
-            print()
-
+            if m>0:
+                print("you got"+str(m)+"money from your robery")
+            if m<0:
+                print("you found lots of money but when you check your wallit .Thares less money then you started with")
+            break
