@@ -118,7 +118,7 @@ while day!=8 and die=="n":
         hp+=1
     while True:
 
-        print("what whould you like to do with your night .1 for crime .2 for meditation.3 for gambling.")
+        print("what whould you like to do with your night c for crime .m for meditation.g for gambling.")
     
         cho=input()
         if cho==4:

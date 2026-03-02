@@ -23,7 +23,7 @@ def shop(goodies):
         buyness =(input ("How much would you like to buy? "))
 
         try:
-            buyness=int(buy)
+            buyness=int(buyness)
         except ValueError:
             print("i need a number idiot")
         else:
