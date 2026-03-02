@@ -1,91 +1,146 @@
+from recipe import resipyChanger,pricer,lemonais_count
 from customer import Customer
+from introduction import intro
+from ingredients import shop
+from nobuy import buyOrnobuy
 import random
-price=1
 recipe={
     "lemon":1,
     "cup":1,
     "ice":1,
     "sugar":1
 }
-def buyOrnobuy(guy,recipe,price,lemonadies,cup):
-    
-    
-    goodness={
-        "sweet":guy["sweetness"]-recipe['sugar'],
-        "ice":guy["ice"]-recipe['ice'],
+die="n"
+money, name=intro()
+goodies={
+    "money":money,
+    "cup":2,
+    "lemon":2,
+    "sugar":2,
+    "ice":2
+}
+day=1
+timeguy=1
+trueday=1
 
-    }
-   
-    chance=["y","y","y"]
-    while goodness["sweet"]!= 0:
-        if goodness["sweet"]>0:
-            chance.append("n")
-            goodness["sweet"]-=1
-        if goodness["sweet"]<0:
-            chance.append("n")
-            goodness["sweet"]+=1
+sanity=10-random.randint(1,3)
+
+
+
+hp=7
+if money==0.2:
+    x=1
+    hp=2
+    sanity=6-random.randint(1,2)
+    debt=10002
+else :
+    debt=1001
+price=1
+x=5
+print("now set your recipe for your lemonade. You can change this later")
+
+print("you should probly change your price from 1$")
+while day!=8 and die=="n":
+    while True:
+        
+        ch=input("what do you do 1 shop 2 see your goodies 3 set your lemonade price 4 change the recipe and any thing else to end day")
+        if ch== "1":
+            goodies=shop(goodies)
+        elif ch== "2":
+            print (goodies)
+        elif ch== "3":
+            price=pricer()
+        elif ch== "4":
+            recipe=resipyChanger(goodies)
+        else:
+            lemonaids=lemonais_count(goodies)
+            if goodies["money"]<=0:
+                die="y"
+            if hp<=0:
+                die="y"  
+            if sanity<=4:
+                print('the line of customers faces are streched eyes ripped out skin pealing off but you need the money')
+            break
+
+        lemonaids=lemonais_count(goodies)
        
-    while goodness["ice"]!= 0:
-        if goodness["ice"]>0:
-            chance.append("n")
-            goodness["ice"]-=1
-        if goodness["ice"]<0:
-            chance.append("n")
-            goodness["ice"]+=1
-     
-     
+    for i in range(1,random.randint(x,8)):
+        c=Customer()
+        tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids,recipe["cup"])
+        
+        if tipe.__contains__("eldrich entity"):
+            sanity-=1
+            if tipe=="eldrich entity dinosaur":
+                print("your mind goes numb")
+            if tipe=="eldrich entity you":
+                print("you see your self walk up to your lemonade stand as it gets closer your vison goes blurry")
+                print("a wave of pain floods your mind .")
+                if buy=="y":
+                    print("it doesn't matter though because they still bought your lemonade!")
+                        
+        if tipe=="mafia":
+                print("yeah you got the goods? ")
+                print("no? well... (takes out banana and points it at you).")
+                if buy=="n":
+                    hp-=1
+                    print(".Your blood flows down the sidewalk. no one seems to notice.")
+                    if sanity<6:
+                        sanity-=1  
+                
+
+        if buy=="y":
+            goodies["money"]+=price
+            lemonaids-=1
+            print(goodies["money"])
+            goodies["cup"]-=recipe["cup"]
+            goodies["lemon"]-=recipe["lemon"]
+            goodies["sugar"]-=recipe["sugar"]
+            goodies["ice"]-=recipe["ice"]
     
-    if guy["price"]+.50<price:
-        chance.append("n")
+    day+=1
+    trueday+=1
+    sanity+=1
+    if day==7 and money<debt:
+        print("the boss looks at your face contorting, you feel flesh ripping apart. your mind splits in two .Your eyes roll back..... then it all stops  ")
+        print("you find your self in a infinet white void . then it all colapses.")
+        print("         ,----.  .-._                      ,-,--. " )
+        print(',-.--` , \/==/ \  .-._  _,..---._  ,-.-  _')
+        print( '|==|-  _.-`|==|, \/ /, /==/,   -  \/==/_ ,_.')
+        print( '  |==|   `.-.|==|-  \|  ||==|   _   _\==\  \ ' ) 
+        print('/==/_ ,    /|==| ,  | -||==|  .=.   |\==\ -\  ') 
+        print('|==|    .- |==| -   _ ||==|,|   | -|_\==\ ,\'' )
+        print('|==|_  ,`-._|==|  /\ , ||==|     /==/\/ _ |')
+        print('/==/ ,     //==/, | |- ||==|-,   _`/\==\ - , / ')
+        print('`--`-----`` `--`./  `--``-.`.____.  `--`---   ')
+
         
-    if guy["price"]+1<price:
-       
-        chance.append("n")
-    if guy["price"]+1.5<price:
-        chance.append("n")
-        
-    if guy["price"]+2.5<price:
-        chance.append("n")
-        chance.append("n")
-        
-    if guy["price"]+4<price:
-        chance.append("n")
-        chance.append("n")
-        chance.append("n") 
-        chance.append("n")
-      
-        chance.append("n")
-    if guy["price"]+7.65<price:
-        for r in range(1,10):
-            chance.append("n")
-        
-    if guy["price"]+20<price:
-        for i in range(1,20):
-            chance.append("n")
-    if guy["price"]+50<price:
-        for i in range(1,100):
-            chance.append("n")
-    if guy["price"]+92<price:
-        for i in range(1,800):
-            chance.append("n")
-   
-    x=random.choice([" level 100 mafia boss"," borgison"," fesgiraf"," gilziblorp"," your mother"," bob"," you"," giraf"," dinosor"])
-    buy=(random.choice(chance))
-    custTipe=(random.choice(["guy","gal","guy","gal","mafia","mafia","gal","guy","eldrich entity"]))
-    if lemonadies<=0:
-        buy="n"
-    print(buy)    
-    if custTipe=="eldrich entity":
-        custTipe="eldrich entity"+x
-    print(custTipe)
+    if trueday==4:
+        hp+=1
+    while True:
 
-
-    return custTipe,buy,
-
-c=Customer()
-
-
-
-
-
-
+        print("what whould you like to do tonight? .1 for crime .2 for meditation.3 for gambling.")
+    
+        cho=input()
+        if cho==4:
+            w=random.choice(["n","n","n","y"])
+            loses=input("how much do you bet?")
+            try:
+                loses=float(loses)
+            except ValueError:
+                print("your friend decides to bet for you because of your indicition.")
+                loses=2
+            if w=="n":
+                money-=loses
+                print("you lost"+str(loses)+"dollars")
+            if w=="y":
+                money+=loses
+                print("you won"+str(loses)+"dollars")
+                
+        elif cho==2:
+            print("your mind reforms")
+            sanity+=1
+        elif cho==1:
+            print("you commit a crime")   
+            m=random.randint(-1,-3.48,-2,-3,-56,-2.3,-1.3,-4.93,1,-2,1,1,1,-1,-1,-2,4.4,3.57,-2.34,1.34,1.563,1,2,3,34,12,6.7)
+            print("you got "+str(m)+" money")
+            print()
