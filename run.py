@@ -102,23 +102,15 @@ while day!=8 and die=="n":
     sanity+=1
     if day==7 and money<debt:
         print("the boss looks at you face contorting flesh ripping apart . your mind splits in two .Your flesh rips eyes roll back..... then it all stops  ")
-        print("you find your self in a infinet white void . then it all")
-        print("         ,----.  .-._                      ,-,--. " )
-        print(',-.--` , \/==/ \  .-._  _,..---._  ,-.-  _')
-        print( '|==|-  _.-`|==|, \/ /, /==/,   -  \/==/_ ,_.')
-        print( '  |==|   `.-.|==|-  \|  ||==|   _   _\==\  \ ' ) 
-        print('/==/_ ,    /|==| ,  | -||==|  .=.   |\==\ -\  ') 
-        print('|==|    .- |==| -   _ ||==|,|   | -|_\==\ ,\'' )
-        print('|==|_  ,`-._|==|  /\ , ||==|     /==/\/ _ |')
-        print('/==/ ,     //==/, | |- ||==|-,   _`/\==\ - , / ')
-        print('`--`-----`` `--`./  `--``-.`.____.  `--`---   ')
+        print("you find your self in a infinet white void . then it all ends")
+ 
 
         
     if trueday==4:
         hp+=1
     while True:
 
-        print("what whould you like to do with your night c for crime .m for meditation.g for gambling.")
+        print("what whould you like to do with your night .1 for crime .2 for meditation.3 for gambling.")
     
         cho=input()
         if cho==4:
