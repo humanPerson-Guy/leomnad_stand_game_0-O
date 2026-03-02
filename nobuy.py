@@ -103,16 +103,7 @@ while day!=8 and die=="n":
     if day==7 and money<debt:
         print("the boss looks at your face contorting, you feel flesh ripping apart. your mind splits in two .Your eyes roll back..... then it all stops  ")
         print("you find your self in a infinet white void . then it all colapses.")
-        print("         ,----.  .-._                      ,-,--. " )
-        print(',-.--` , \/==/ \  .-._  _,..---._  ,-.-  _')
-        print( '|==|-  _.-`|==|, \/ /, /==/,   -  \/==/_ ,_.')
-        print( '  |==|   `.-.|==|-  \|  ||==|   _   _\==\  \ ' ) 
-        print('/==/_ ,    /|==| ,  | -||==|  .=.   |\==\ -\  ') 
-        print('|==|    .- |==| -   _ ||==|,|   | -|_\==\ ,\'' )
-        print('|==|_  ,`-._|==|  /\ , ||==|     /==/\/ _ |')
-        print('/==/ ,     //==/, | |- ||==|-,   _`/\==\ - , / ')
-        print('`--`-----`` `--`./  `--``-.`.____.  `--`---   ')
-
+     
         
     if trueday==4:
         hp+=1
