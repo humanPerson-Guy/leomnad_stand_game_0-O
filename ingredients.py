@@ -11,8 +11,24 @@ def shop(goodies):
     lemon=goodies["lemon"]
     sugar=goodies["sugar"]
     ice=goodies["ice"]
-    buy=int(input("1 =lemon 2=cup 3=sugar 4=ice "))
-    buyness =int(input ("How much would you like to buy? "))
+    while True:
+        buy=(input("1 =lemon 2=cup 3=sugar 4=ice "))
+        try:
+            buy=int(buy)
+        except ValueError:
+            print("a number idiot")
+        else:
+            break
+    while True:
+        buyness =(input ("How much would you like to buy? "))
+
+        try:
+            buyness=int(buy)
+        except ValueError:
+            print("a number idiot")
+        else:
+            break
+    
     if buyness <= 0:
         print("you didn't buy anything.")
     elif buy==1:

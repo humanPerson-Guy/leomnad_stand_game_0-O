@@ -20,17 +20,38 @@ recipe={
 #print(recipe)
 def resipyChanger(goodies):
     while True:
-        print(recipe['lemon'])
-        recipe['lemon']=float(input("how many lemons per cup? you can put any amount 1-4 "))
+        while True:    
+            
+                recipe['lemon']=(input("how many lemons per cup? you can put any amount 1-4 "))
+                
+                recipe['sugar']=(input("how much sugar per cup? you can put any amount 1-4 "))
+            
+                recipe['ice']=(input("how much ice per cup? you can put any amount 1-4 "))
+        
+                recipe['cup']=(input("how many cups per cup? you can put any amount 1-4"))
+        
+                
+
+                try:
+                    recipe['lemon']=int(recipe['lemon'])
+                    recipe['sugar']=int(recipe['sugar'])
+                    recipe['ice']=int(recipe['ice'])
+                    recipe['cup']=int(recipe['cup'])
+                except ValueError:
+                    print("a number idiot")
+                else:
+                    break
+        
+        
         if recipe['lemon']>=5:
             continue
-        recipe['sugar']=float(input("how much sugar per cup? you can put any amount 1-4 "))
+        
         if recipe['sugar']>=5:
             continue
-        recipe['ice']=float(input("how much ice per cup? you can put any amount 1-4 "))
+        
         if recipe['ice']>=5:
             continue
-        recipe['cup']=float(input("how many cups per cup? you can put any amount 1-4"))
+        
         if recipe['cup']>=5:
             continue
         break
