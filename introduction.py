@@ -12,25 +12,22 @@ def intro():
 
     difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible: ")
     while True:
-            if difficulty == "Easy" or "1":
-                print("You have 600 dollars.")
-                money = 600
-            elif difficulty == "Medium" or "2":
-                print("You have 400 dollars.")
-                money = 400
-                break    
-            elif difficulty == "Hard" or "3":
-                print("You have 200 dollars.")
-                money = 200
-                break    
-            elif difficulty == "Impossible" or "4":
-                print("You have 100 dollars")
-                money = 99.68
-                break    
-            elif difficulty == "ez":
-                print("you have nothing")
-                money = 0.2
-                break
-            else:
-                print("invalid input")            
-            return money,name
+        if difficulty.lower() == "easy" or difficulty == "1":
+            print("You have 600 dollars.")
+            money = 600
+        elif difficulty.lower() == "medium" or difficulty == "2":
+            print("You have 400 dollars.")
+            money = 400
+        elif difficulty.lower() == "hard" or difficulty == "3":
+            print("You have 200 dollars.")
+            money = 200
+        elif difficulty.lower() == "impossible" or difficulty == "4":
+            print("You have 100 dollars")
+            money = 99.68
+        elif difficulty.lower() == "ez":
+            print("you have nothing")
+            money = 0.2
+        else:
+            print("invalid input")            
+        
+        return money,name
