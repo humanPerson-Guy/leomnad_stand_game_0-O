@@ -43,7 +43,7 @@ print("You should probably change your price from 1$.")
 while day!=8 and die=="n":
     while True:
         
-        ch=input("What do you do 1 shop 2 see yoour goodies 3 set your lemonade price 4 change the recipe and anything else to end day.")
+        ch=input("What do you do 1 shop 2 see your goodies 3 set your lemonade price 4 change the recipe and anything else to end day.")
         if ch== "1":
             goodies=shop(goodies)
         elif ch== "2":
