@@ -1,4 +1,3 @@
-from customer import Customer
 import random
 price=1
 recipe={
@@ -74,18 +73,9 @@ def buyOrnobuy(guy,recipe,price,lemonadies,cup):
     custTipe=(random.choice(["guy","gal","guy","gal","mafia","mafia","gal","guy","eldrich entity"]))
     if lemonadies<=0:
         buy="n"
-    print(buy)    
+  
     if custTipe=="eldrich entity":
         custTipe="eldrich entity"+x
+    print(buy)
     print(custTipe)
-
-
-    return custTipe,buy,
-
-c=Customer()
-
-
-
-
-
-
+    return custTipe,buy
