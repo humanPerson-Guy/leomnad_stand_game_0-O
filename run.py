@@ -114,7 +114,7 @@ while day!=8 and die=="n":
     
         cho=input()
         if cho=="g":
-            w=random.choice(["n","n","n","y","n"])
+            w=random.choice(["n","n","n","n","y"])
             loses=input("how much you gmbling")
             try:
                 loses=float(loses)
@@ -124,9 +124,11 @@ while day!=8 and die=="n":
             else:
                 if loses>money:
                     print("your to poor")
+                elif loses <0:
+                    print("positive number idiot")    
                 elif w=="n":
                     money-=loses
-                    print("you lost"+str(loses)+"dolors")
+                    print("you lost" + str(loses) + "dolors")
                     print(money)
                 elif w=="y":
                     money+=loses
