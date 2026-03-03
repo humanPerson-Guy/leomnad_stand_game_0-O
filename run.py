@@ -141,13 +141,16 @@ while day!=8 and die=="n":
         elif cho=="c":
             print("you comit a crime")   
             m=random.randint(-80,40)
-            money+=m
+            if m+money>0:
+                money+=m
+                
             if m>0:
                 print("you got"+str(m)+"money from your robery")
             if m<0:
                 print("you found lots of money but when you check your wallit .Thares less money then you started with")
+                print(m)
             break
 if die=="y":
     print('skill isho')
 if die=="n":
-    print('skill isho')
+    print('u win but did you rilly')
