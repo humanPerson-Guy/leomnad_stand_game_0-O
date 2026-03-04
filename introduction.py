@@ -7,7 +7,7 @@ def intro():
     )
     name = input("Enter your name: ")
     print("Hello", name ,"welcome to lemonade stand! In this game you will sell lemonade to customers. The goal is to not die from the mafia. The rules are very simple",name,"start off with a amount of money and buy ingredients and create a recipe for your customers. If you end up with no money you go bankrupt and the mafia gets you at the end of 7 days you need 1000$ to pay of your debt to the mafia good luck.")
-
+    print("the so called spelling errors are a stylelistic chioce to show that your caritor is going insaine")
     
 
     

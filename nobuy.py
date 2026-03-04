@@ -15,7 +15,7 @@ def buyOrnobuy(guy,recipe,price,lemonadies,cup):
 
     }
    
-    chance=["y","y","y"]
+    chance=["y","y","y","y"]
     while goodness["sweet"]!= 0:
         if goodness["sweet"]>0:
             chance.append("n")
@@ -34,20 +34,20 @@ def buyOrnobuy(guy,recipe,price,lemonadies,cup):
      
      
     
-    if guy["price"]+.50<price:
+    if guy["price"]+.75<price:
         chance.append("n")
         
-    if guy["price"]+1<price:
+    if guy["price"]+1.5<price:
        
         chance.append("n")
-    if guy["price"]+1.5<price:
+    if guy["price"]+2<price:
         chance.append("n")
         
-    if guy["price"]+2.5<price:
+    if guy["price"]+3.5<price:
         chance.append("n")
         chance.append("n")
         
-    if guy["price"]+4<price:
+    if guy["price"]+5<price:
         chance.append("n")
         chance.append("n")
         chance.append("n") 

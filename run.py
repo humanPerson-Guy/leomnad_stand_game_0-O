@@ -28,15 +28,11 @@ sanity=10-random.randint(1,3)
 
 
 hp=7
-if money==0.2:
-    x=1
-    hp=2
-    sanity=6-random.randint(1,2)
-    debt=10002
-else :
-    debt=1001
+
+
+debt=1001
 price=1
-x=5
+x=10
 print("Now set your recipe for your lemonade. You can change this later.")
 
 print("You should probably change your price from 1$.")
@@ -64,7 +60,7 @@ while day!=8 and die=="n":
 
         lemonaids=lemonais_count(goodies)
        
-    for i in range(1,random.randint(x,8)):
+    for i in range(1,random.randint(6,x)):
         c=Customer()
         tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids,recipe["cup"])
         
