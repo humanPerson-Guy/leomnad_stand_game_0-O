@@ -71,10 +71,10 @@ while day!=8 and die=="n":
         if tipe.__contains__("eldrich entity"):
             sanity-=1
             if tipe=="eldrich entity dinosor":
-                print("your mind gos numb")
+                print("your mind goes numb")
             if tipe=="eldrich entity you":
                 print("you see your self walk up to your lemonaid stand as it gets closer your vison gos blurry")
-                print("a wave of pain floods your mind .")
+                print("a wave of pain floods your mind.")
                 if buy=="y":
                     print("it dusint matter tho cuz thay bought your lemonaid")
                         
@@ -155,4 +155,4 @@ while day!=8 and die=="n":
 if die=="y":
     print('skill issue')
 if die=="n":
-    print('You win but did you really.')
+    print('You win but did you really?')
