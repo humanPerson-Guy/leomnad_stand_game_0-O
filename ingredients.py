@@ -32,10 +32,10 @@ def shop(goodies):
     if buyness <= 0:
         print("you didn't buy anything.")
     elif buy==1:
-        if money<=buyness*-1+money:
+        if money<=buyness*-0.75+money:
             print("you don't have enough")
         else:
-            money=buyness*-1+money
+            money=buyness*-0.75+money
             lemon+=buyness
     elif buy==2:
         if money<=buyness*-0.56+money:
