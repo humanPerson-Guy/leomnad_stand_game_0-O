@@ -12,7 +12,7 @@ def intro():
 
     
     while True:
-        difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible: ")
+        difficulty = input("Choose difficulty Easy/Medium/Hard/Impossible/Ez: ")
         if difficulty.lower() == "easy" or difficulty == "1":
             print("You have 600 dollars.")
             money = 600
