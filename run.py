@@ -27,12 +27,12 @@ sanity=10-random.randint(1,3)
 
 
 
-hp=7
+hp=20
 
 
 debt=1001
 price=1
-x=10
+x=80
 print("Now set your recipe for your lemonade. You can change this later.")
 
 print("You should probably change your price from 1$.")
@@ -60,7 +60,7 @@ while day!=8 and die=="n":
 
         lemonaids=lemonais_count(goodies)
        
-    for i in range(1,random.randint(6,x)):
+    for i in range(1,random.randint(40,x)):
         c=Customer()
         tipe,buy=buyOrnobuy(c.get_customer_attributes(),recipe,price,lemonaids,recipe["cup"])
         
@@ -99,12 +99,13 @@ while day!=8 and die=="n":
     if day==7 and money<debt:
         print("the boss looks at you face contorting flesh ripping apart . your mind splits in two .Your flesh rips eyes roll back..... then it all stops  ")
         print("you find your self in a infinet white void . then it all ends")
+        die="y"
  
 
         
     if trueday==4:
         hp+=1
-    while True:
+    while die=="n":
 
         print("what would you like to do with your night. C, for crime. M, for meditation. G, for gambling. You can gamble as much as you want but the other two take time so you can only do them once.")
     
@@ -139,8 +140,8 @@ while day!=8 and die=="n":
         elif cho=="c":
             print("you comit a crime")   
             m=random.randint(-80,40)
-            if m+money>0:
-                money+=m
+            
+            money+=m
                 
             if m>0:
                 print("you got"+str(m)+"money from your robery")
