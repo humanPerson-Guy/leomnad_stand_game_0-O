@@ -110,29 +110,29 @@ while day!=8 and die=="n":
         hp+=1
     while True:
 
-        print("what whould you like to do with your night .c for crime .m for meditation.g for gambling.You can gamble as much as you whant but the other two take time so you can only do them once.")
+        print("what would you like to do with your night. C, for crime. M, for meditation. G, for gambling. You can gamble as much as you want but the other two take time so you can only do them once.")
     
         cho=input()
         if cho=="g":
             w=random.choice(["n","n","n","n","y"])
-            loses=input("how much you gmbling")
+            loses=input("how much are you gambling?")
             try:
                 loses=float(loses)
             except ValueError:
-                print("your firend disides to bet for you becose of your indicition.")
+                print("Your friend decides to bet for you because of your indecision.")
                 loses=2
             else:
                 if loses>money:
-                    print("your to poor")
+                    print("you're to poor")
                 elif loses <0:
                     print("positive number idiot")    
                 elif w=="n":
                     money-=loses
-                    print("you lost" + str(loses) + "dolors")
+                    print("you lost" + str(loses) + "dollars")
                     print(money)
                 elif w=="y":
                     money+=loses
-                    print("you won"+str(loses)+"dolors")
+                    print("you won"+str(loses)+"dollars")
                     print(money)
                 
                     
@@ -149,10 +149,10 @@ while day!=8 and die=="n":
             if m>0:
                 print("you got"+str(m)+"money from your robery")
             if m<0:
-                print("you found lots of money but when you check your wallit .Thares less money then you started with")
+                print("You found lots of money but when you check your wallet. There's less money than what you started with.")
                 print(m)
             break
 if die=="y":
-    print('skill isho')
+    print('skill issue')
 if die=="n":
-    print('u win but did you rilly')
+    print('You win but did you really.')
