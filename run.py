@@ -39,7 +39,7 @@ print("You should probably change your price from 1$.")
 while day!=8 and die=="n":
     while True:
         
-        ch=input("What do you do 1 shop 2 see your goodies 3 set your lemonade price 4 change the recipe and anything else to end day.")
+        ch=input("What do you do. 1 for shop, 2 to see your goodies, 3 to set your lemonade price, 4 to change the recipe and anything else.")
         if ch== "1":
             goodies=shop(goodies)
         elif ch== "2":
@@ -55,7 +55,7 @@ while day!=8 and die=="n":
             if hp<=0:
                 die="y"  
             if sanity<=4:
-                print('the line of custimers faces are streched eyes ripped out skin pealing off but you need the money')
+                print('The line of custimers faces are streched eyes ripped out skin peeling off but you need the money.')
             break
 
         lemonaids=lemonais_count(goodies)
@@ -67,15 +67,15 @@ while day!=8 and die=="n":
         if tipe.__contains__("eldrich entity"):
             sanity-=1
             if tipe=="eldrich entity dinosor":
-                print("your mind gos numb")
+                print("your mind goes numb")
             if tipe=="eldrich entity you":
                 print("you see your self walk up to your lemonaid stand as it gets closer your vison gos blurry")
-                print("a wave of pain floods your mind .")
+                print("a wave of pain floods your mind.")
                 if buy=="y":
-                    print("it dusint matter tho cuz thay bought your lemonaid")
+                    print("it doesn't matter though because they bought your lemonade.")
                         
         if tipe=="mafia":
-                print("eah you got the goods ")
+                print("eh you got the goods. ")
                 print("no well (takes out banana and points it at you).")
                 if buy=="n":
                     hp-=1
@@ -151,4 +151,4 @@ while day!=8 and die=="n":
 if die=="y":
     print('skill issue')
 if die=="n":
-    print('You win but did you really.')
+    print('You win but did you really?')
