@@ -39,7 +39,7 @@ print("You should probably change your price from 1$.")
 while day!=8 and die=="n":
     while die=="n":
         
-        ch=input("What do you do. 1 for shop, 2 to see your goodies, 3 to set your lemonade price, 4 to change the recipe and anything else.")
+        ch=input("What do you do. 1 for shop, 2 to see your goodies, 3 to set your lemonade price, 4 to change the recipe and anything else will emd the day.")
         if ch== "1":
             goodies=shop(goodies)
         elif ch== "2":
@@ -57,7 +57,8 @@ while day!=8 and die=="n":
             if sanity<=4:
                 print('The line of custimers faces are streched eyes ripped out skin peeling off but you need the money.')
             break
-
+        if die=="y":
+            break
         
        
     for i in range(1,random.randint(40,x)):
@@ -124,13 +125,13 @@ while day!=8 and die=="n":
                 elif loses <0:
                     print("positive number idiot")    
                 elif w=="n":
-                    money-=loses
+                    goodies['money']-=loses
                     print("you lost" + str(loses) + "dollars")
-                    print(money)
+                    print(goodies['money'])
                 elif w=="y":
-                    money+=loses
+                    goodies['money']+=loses
                     print("you won"+str(loses)+"dollars")
-                    print(money)
+                    print(goodies['money'])
                 
                     
         elif cho=="m":
@@ -138,16 +139,18 @@ while day!=8 and die=="n":
             sanity+=1
             break
         elif cho=="c":
-            print("you commit a crime")   
+            print("you comit a crime")   
             m=random.randint(-80,40)
             
-            money+=m
+            
                 
             if m>0:
                 print("you got"+str(m)+"money from your robery")
+                goodies['money']+=m
             if m<0:
                 print("You found lots of money but when you check your wallet. There's less money than what you started with.")
                 print(m)
+                goodies['money']+=m
             break
 if die=="y":
     print('skill issue')
