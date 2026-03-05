@@ -37,7 +37,7 @@ print("Now set your recipe for your lemonade. You can change this later.")
 
 print("You should probably change your price from 1$.")
 while day!=8 and die=="n":
-    while True:
+    while die=="n":
         
         ch=input("What do you do. 1 for shop, 2 to see your goodies, 3 to set your lemonade price, 4 to change the recipe and anything else.")
         if ch== "1":
@@ -58,7 +58,7 @@ while day!=8 and die=="n":
                 print('The line of custimers faces are streched eyes ripped out skin peeling off but you need the money.')
             break
 
-        lemonaids=lemonais_count(goodies)
+        
        
     for i in range(1,random.randint(40,x)):
         c=Customer()
