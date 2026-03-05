@@ -138,7 +138,7 @@ while day!=8 and die=="n":
             sanity+=1
             break
         elif cho=="c":
-            print("you comit a crime")   
+            print("you commit a crime")   
             m=random.randint(-80,40)
             
             money+=m
