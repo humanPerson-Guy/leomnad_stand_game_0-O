@@ -39,7 +39,7 @@ print("You should probably change your price from 1$.")
 while day!=8 and die=="n":
     while die=="n":
         
-        ch=input("What do you do. 1 for shop, 2 to see your goodies, 3 to set your lemonade price, 4 to change the recipe and anything else will emd the day.")
+        ch=input("What do you do. 1 for shop, 2 to see your goodies, 3 to set your lemonade price, 4 to change the recipe and anything else will end the day also 5 to buy food that heals you .")
         if ch== "1":
             goodies=shop(goodies)
         elif ch== "2":
@@ -48,6 +48,10 @@ while day!=8 and die=="n":
             price=pricer()
         elif ch== "4":
             recipe=resipyChanger(goodies)
+        elif ch=="5":
+            goodies["money"]-=13
+            hp+=7
+            
         else:
             lemonaids=lemonais_count(goodies)
             if goodies["money"]<=0:
