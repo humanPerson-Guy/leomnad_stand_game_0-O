@@ -98,8 +98,8 @@ while day!=8 and die=="n":
     trueday+=1
     sanity+=1
     if day==7 and money<debt:
-        print("the boss looks at you face contorting flesh ripping apart . your mind splits in two .Your flesh rips eyes roll back..... then it all stops  ")
-        print("you find your self in a infinet white void . then it all ends")
+        print("The boss looks at you face contorting flesh ripping apart. Your mind splits in two .Your flesh rips eyes roll back..... then it all stops.  ")
+        print("You find your self in a infinite white void. Then it all ends")
         die="y"
  
 
