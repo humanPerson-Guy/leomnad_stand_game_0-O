@@ -107,7 +107,8 @@ while day!=8 and die=="n":
         die="y"
  
 
-        
+    print("your hp is")   
+    print(hp)
     if trueday==4:
         hp+=1
     while die=="n":
@@ -158,5 +159,6 @@ while day!=8 and die=="n":
             break
 if die=="y":
     print('skill issue')
+    print(hp)
 if die=="n":
     print('You win but did you really?')
