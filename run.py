@@ -59,7 +59,7 @@ while day!=8 and die=="n":
             if hp<=0:
                 die="y"  
             if sanity<=4:
-                print('The line of custimers faces are streched eyes ripped out skin peeling off but you need the money.')
+                print('The line of customers faces are streched, eyes ripped out, skin peeling off but you need the money.')
             break
         if die=="y":
             break
@@ -74,7 +74,7 @@ while day!=8 and die=="n":
             if tipe=="eldrich entity dinosor":
                 print("your mind goes numb")
             if tipe=="eldrich entity you":
-                print("you see your self walk up to your lemonaid stand as it gets closer your vison gos blurry")
+                print("you see your self walk up to your lemonade stand as it gets closer your vision gos blurry")
                 print("a wave of pain floods your mind.")
                 if buy=="y":
                     print("it doesn't matter though because they bought your lemonade.")
@@ -84,7 +84,7 @@ while day!=8 and die=="n":
                 print("no well (takes out banana and points it at you).")
                 if buy=="n":
                     hp-=1
-                    print(".Your blood flows down the side walk none of the custimers seem to notice.")
+                    print(".Your blood flows down the side walk none of the customers seem to notice.")
                     if sanity<6:
                         sanity-=1  
                 
